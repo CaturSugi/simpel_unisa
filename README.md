@@ -65,12 +65,22 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-composer update
-php artisan migrate:refresh --seed
-php artisan migrate:rollback
+## Istalasi
+- jalankan `composer install` setelah melakukan clone dari github
+- composer update
+- copy .env.example .env if .env not exists
+- configuration database in file .env
+- php artisan migrate:rollback
+- php artisan migrate:refresh --seed
+
+## Setup 
+
+1. Buat database pada phpmyadmin sesuai dengan nama database
+2. Import database `db_simpel.sql`
+3. Untuk password yang ada di tabel users
 
 
-hapus data otomatis 
+## hapus data otomatis 
 php artisan make:command DeleteOldRecords
 * * * * * cd /path/to/project && php artisan schedule:run >> /dev/null 2>&1
 crontab -e
