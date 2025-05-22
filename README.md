@@ -74,7 +74,8 @@ hapus data otomatis
 php artisan make:command DeleteOldRecords
 * * * * * cd /path/to/project && php artisan schedule:run >> /dev/null 2>&1
 crontab -e
- Tes manual
+
+Tes manual
 php artisan records:cleanup
 
 mengunakan model
