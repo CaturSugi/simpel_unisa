@@ -407,7 +407,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> --}}
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -647,7 +647,7 @@
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">SimpelUnisa</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>Simpel Unisa Adalah Web Pengelola Informasi Pengolahan Sampah Yang ada di Lingkungan Kampus Universitas Aisyiyah Yogyakarta.</p>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
