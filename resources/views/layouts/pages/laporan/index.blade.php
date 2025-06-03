@@ -35,13 +35,43 @@
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-6 ml-auto">
+                <div class="card border-left-info shadow h-100">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="mr-3 flex-grow-1">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-2">
+                                Jumlah Sampah Keseluruhan
+                            </div>
+                            <div class="h4 mb-0 font-weight-bold text-gray-800">{{ $totalTrashCount ?? $trashes->total() ?? $trashes->count() }}</div>
+                        </div>
+                        <div>
+                            <i class="fas fa-dumpster fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-6 ml-auto">
+                <div class="card border-left-warning shadow h-100">
+                    <div class="card-body d-flex align-items-center">
+                        <div class="mr-3 flex-grow-1">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-2">
+                                Total Berat Sampah
+                            </div>
+                            <div class="h4 mb-0 font-weight-bold text-gray-800">{{ $totalWeight ?? $trashes->sum('weight') }} Kg</div>
+                        </div>
+                        <div>
+                            <i class="fas fa-balance-scale fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-6 ml-auto">
                 <div class="card border-left-success shadow h-100">
                     <div class="card-body d-flex align-items-center">
                         <div class="mr-3 flex-grow-1">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-2">
-                                Total Berat Sampah
+                                Total Berat Sampah Keseluruhan
                             </div>
-                            <div class="h4 mb-0 font-weight-bold text-gray-800">{{ $trashes->sum('weight') }} Kg</div>
+                            <div class="h4 mb-0 font-weight-bold text-gray-800">{{ \App\Models\Trash::sum('weight') }} Kg</div>
                         </div>
                         <div>
                             <i class="fas fa-weight fa-2x text-gray-300"></i>
