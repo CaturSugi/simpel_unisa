@@ -26,7 +26,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-2">
                                 Jumlah Sampah
                             </div>
-                            <div class="h4 mb-0 font-weight-bold text-gray-800">{{ \App\Models\Trash::count() }}</div>
+                            <div class="h4 mb-0 font-weight-bold text-gray-800">{{ $trashes->count() }}</div>
                         </div>
                         <div>
                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -41,7 +41,7 @@
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-2">
                                 Total Berat Sampah
                             </div>
-                            <div class="h4 mb-0 font-weight-bold text-gray-800">{{ \App\Models\Trash::sum('weight') }} Kg</div>
+                            <div class="h4 mb-0 font-weight-bold text-gray-800">{{ $trashes->sum('weight') }} Kg</div>
                         </div>
                         <div>
                             <i class="fas fa-weight fa-2x text-gray-300"></i>
@@ -117,10 +117,7 @@
                                             </button>
                                             <script>
                                                 document.getElementById('resetButton').addEventListener('click', function() {
-                                                    document.getElementById('startDate').value = '';
-                                                    document.getElementById('endDate').value = '';
-                                                    document.getElementById('filterCategory').value = '';
-                                                    document.getElementById('filterBuilding').value = '';
+                                                    window.location.href = "{{ url('/laporan') }}";
                                                 });
                                             </script>
                                         </form>
@@ -166,7 +163,11 @@
                                     @foreach ($trashes as $item)
                                         <tr>
                                             <td class="text-center">
-                                                {{ (request('perPage') == 'all' ? $trashes->count() : $trashes->total()) - (($trashes->currentPage() - 1) * $trashes->perPage()) - $loop->index }}
+                                                @if(request('perPage') == 'all' || !($trashes instanceof \Illuminate\Pagination\LengthAwarePaginator))
+                                                    {{ $trashes->count() - $loop->index }}
+                                                @else
+                                                    {{ $trashes->total() - (($trashes->currentPage() - 1) * $trashes->perPage()) - $loop->index }}
+                                                @endif
                                             </td>
                                             <td>{{ $item->name }}</td>
                                             <td>{{ $item->category->name }}</td>
