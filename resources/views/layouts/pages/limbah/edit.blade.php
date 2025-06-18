@@ -2,7 +2,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="editModalLabel{{ $item->id }}">Edit Limbah</h5>
+                <h5 class="modal-title" id="editModalLabel{{ $item->id }}">Edit Sampah</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -12,7 +12,7 @@
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                        <label for="name{{ $item->id }}">Nama Limbah</label>
+                        <label for="name{{ $item->id }}">Nama Sampah</label>
                         <input type="text" class="form-control" id="name{{ $item->id }}" name="name" value="{{ $item->name }}" required>
                     </div>
                     <div class="form-group">
@@ -32,7 +32,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="building{{ $item->id }}">Sumber Limbah</label>
+                        <label for="building{{ $item->id }}">Sumber Sampah</label>
                         <select class="form-control" id="building_id{{ $item->id }}" name="building_id" required>
                             @foreach($buildings as $building)
                                 <option value="{{ $building->id }}" {{ $item->building_id == $building->id ? 'selected' : '' }}>{{ $building->name }}</option>

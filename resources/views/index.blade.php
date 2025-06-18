@@ -87,11 +87,11 @@
               <h4 class="title"><a href="">Pengurangan Sampah</a></h4>
                 <p class="description">
                 @php
-                  $twoYearsAgoWeight = $trashes->where('collection_date', '>=', now()->subYears(2)->startOfYear())
-                     ->where('collection_date', '<', now()->subYear()->startOfYear())
+                  $twoYearsAgoWeight = $trashes->where('created_at', '>=', now()->subYears(2)->startOfYear())
+                     ->where('created_at', '<', now()->subYear()->startOfYear())
                      ->sum('weight');
-                  $lastYearWeight = $trashes->where('collection_date', '>=', now()->subYear()->startOfYear())
-                     ->where('collection_date', '<', now()->startOfYear())
+                  $lastYearWeight = $trashes->where('created_at', '>=', now()->subYear()->startOfYear())
+                     ->where('created_at', '<', now()->startOfYear())
                      ->sum('weight');
                   $percentageReduction = $twoYearsAgoWeight > 0 ? (($twoYearsAgoWeight - $lastYearWeight) / $twoYearsAgoWeight) * 100 : 0;
                 @endphp
@@ -114,7 +114,7 @@
             <div class="icon-box">
               <div class="icon"><i class="bi bi-command"></i></div>
               <h4 class="title"><a href="">Sampah Saat Ini</a></h4>
-                <p class="description">Jumlah: {{ $trashes->where('collection_date', '>=', now()->startOfYear())->sum('weight') }} kg</p>
+                <p class="description">Jumlah: {{ $trashes->where('created_at', '>=', now()->startOfYear())->sum('weight') }} kg</p>
             </div>
           </div><!--End Icon Box -->
 

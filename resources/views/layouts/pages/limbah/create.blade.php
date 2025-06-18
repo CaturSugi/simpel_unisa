@@ -2,7 +2,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="createModalLabel">Tambah Limbah</h5>
+                <h5 class="modal-title" id="createModalLabel">Tambah Sampah</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -12,8 +12,8 @@
                 @method('POST')
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="name">Nama Limbah</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Masukan nama limbah" required required pattern="[A-Za-z0-9\s]+" title="Hanya huruf dan angka tanpa simbol">
+                        <label for="name">Nama Sampah</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Masukan nama Sampah" required required pattern="[A-Za-z0-9\s]+" title="Hanya huruf dan angka tanpa simbol">
                         @error('name')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
