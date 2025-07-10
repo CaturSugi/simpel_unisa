@@ -37,6 +37,7 @@ class ReportController extends Controller
 
         // Pagination logic
         $perPage = $request->input('perPage', 25);
+        $query->orderBy('created_at', 'desc'); // Urutkan dari terbaru ke terlama
         if ($perPage === 'all') {
             $trashes = $query->get();
         } else {
