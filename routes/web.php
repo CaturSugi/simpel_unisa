@@ -40,7 +40,7 @@ Route::get('/logout', [AuthController::class, 'logout']);
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(IsLogin::class);
  
 
-Route::middleware([\App\Http\Middleware\IsLogin::class])->group(function () {
+Route::middleware([IsLogin::class])->group(function () {
     
         Route::get('/dashboard', [DashboardController::class, 'index']);
     
