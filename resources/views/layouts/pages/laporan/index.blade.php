@@ -85,7 +85,7 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <div class="card shadow mb-5">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Laporan Sampah Sugi</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Laporan Sampah</h6>
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#createModal">
                             Cetak Laporan
