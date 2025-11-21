@@ -39,10 +39,11 @@
                             @endforeach
                         </select>
                     </div>
-                    {{-- <div class="form-group">
+                    <div class="form-group">
                         <label for="collection_date{{ $item->id }}">Tanggal Masuk</label>
-                        <input type="date" class="form-control" id="collection_date{{ $item->id }}" name="collection_date" value="{{ $item->collection_date }}" required>
-                    </div> --}}
+                        <input type="date" class="form-control" id="collection_date{{ $item->id }}" name="collection_date"
+                            value="{{ old('collection_date', (isset($item->collection_date) && $item->collection_date) ? \Carbon\Carbon::parse($item->collection_date)->format('Y-m-d') : '') }}"required>
+                    </div>
                     <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
             </div>

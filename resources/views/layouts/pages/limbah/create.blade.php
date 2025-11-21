@@ -58,13 +58,13 @@
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
-                    {{-- <div class="form-group">
+                    <div class="form-group">
                         <label for="collection_date">Tanggal Masuk</label>
                         <input type="date" class="form-control" id="collection_date" name="collection_date" required>
                         @error('collection_date')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
-                    </div> --}}
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>

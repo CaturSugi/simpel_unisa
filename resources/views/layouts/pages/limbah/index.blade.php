@@ -105,7 +105,7 @@
                                 <td>{{ $item->description }}</td>
                                 <td>{{ $item->weight }}</td>
                                 <td>{{ $item->building?->name ?? 'N/A' }}</td>
-                                <td>{{ \Carbon\Carbon::parse($item->created_at)->format('Y-m-d') }}</td>
+                                <td>{{ $item->collection_date ? \Carbon\Carbon::parse($item->collection_date)->format('Y-m-d') : 'N/A' }}</td>
                                 <td>
                                 <div class="d-flex justify-content-center">
                                     <!-- Button trigger modal -->

@@ -22,7 +22,7 @@
 2. Import database `db_simpel.sql`
 3. Untuk password yang ada di tabel users
 
-
+compose
 ## hapus data otomatis 
 php artisan make:command DeleteOldRecords
 * * * * * cd /path/to/project && php artisan schedule:run >> /dev/null 2>&1
