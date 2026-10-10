@@ -20,7 +20,7 @@
 
 1. Buat database pada php myadmin sesuai dengan nama database
 2. Import database `db_simpel.sql`
-3. Untuk password yang ada di tabel users
+3. Untuk password yang ada di tabel user
 
 compose
 ## hapus data otomatis 
