@@ -31,7 +31,7 @@ crontab -e
 Tes manual
 php artisan records:cleanup
 
-mengunakan model
+mengunakan modell
 
 namespace App\Console\Commands;
 
